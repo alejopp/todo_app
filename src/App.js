@@ -6,19 +6,26 @@ import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import './App.css';
 
-
-const todos = [
+const defaultTodos = [
   {text: 'Cut onios ', completed: false},
   {text: 'Take react intro course ', completed: false},
   {text: 'Practice English ', completed: false},
   {text: 'Practice Deutsch ', completed: false},
 ];
 
+
 function App(props) {
+
+  const [todos,setTodos] = React.useState(defaultTodos);
+  const [searchValue,setSearchValue] = React.useState("");
+
   return (
     <React.Fragment>
        <TodoCounter />
-       <TodoSearch />
+       <TodoSearch
+        searchValue = {searchValue}
+        setSearchValue= {setSearchValue}  
+       />
        <CreateButton/>
      
       <TodoList>
