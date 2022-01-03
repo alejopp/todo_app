@@ -1,10 +1,6 @@
 import React from 'react';
-import { CreateButton } from '../CreateButton';
-import { TodoCounter } from '../TodoCounter';
-import { TodoSearch } from '../TodoSearch';
-import { TodoItem } from '../TodoItem';
-import { TodoList } from '../TodoList';
 import './App.css';
+import { AppUi } from './AppUI';
 
 const defaultTodos = [
   {text: 'Cut onions', completed: true},
@@ -33,43 +29,27 @@ function App(props) {
    });
   }
 
-const completeTodos = (text) => {
+const completeTodo = (text) => {
   const todoIndex = todos.findIndex(todo => todo.text === text);
   const newTodos = [...todos];
   newTodos[todoIndex].completed = true;
   setTodos(newTodos);
 };
 
-const deleteTodos = (text) => {
+const deleteTodo = (text) => {
   const newTodos = todos.filter(todo => todo.text !== text);
   setTodos(newTodos);
 };
 
   return (
-    <React.Fragment>
-       <TodoCounter
-          completedTodos = {completedTodos}
-          totalTodos = {totalTodos}
-       />
-       <TodoSearch
-        searchValue = {searchValue}
-        setSearchValue= {setSearchValue}  
-       />
-
-       <CreateButton/>
-     
-      <TodoList>
-        {searchedTodos.map(todo => (
-          <TodoItem 
-            key = {todo.text} 
-            text = {todo.text} 
-            completed={todo.completed}
-            onComplete = {() => completeTodos(todo.text)}
-            onDelete = {()=>deleteTodos(todo.text)}/>
-        ))}
-      </TodoList>
-    </React.Fragment>
-
+    < AppUi 
+      totalTodos={totalTodos}
+      completedTodos={completedTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeTodo={completeTodo}
+      deleteTodo={deleteTodo}/>
   );
 }
 
