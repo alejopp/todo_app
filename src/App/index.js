@@ -1,9 +1,9 @@
 import React from 'react';
-import { CreateButton } from './CreateButton';
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { TodoItem } from './TodoItem';
-import { TodoList } from './TodoList';
+import { CreateButton } from '../CreateButton';
+import { TodoCounter } from '../TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoItem } from '../TodoItem';
+import { TodoList } from '../TodoList';
 import './App.css';
 
 const defaultTodos = [
