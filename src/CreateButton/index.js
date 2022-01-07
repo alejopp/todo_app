@@ -1,9 +1,9 @@
 import React from "react";
 import './CreateButton.css';
 
-function CreateButton(){
+function CreateButton(props){
     const onAddToDo = () => {
-        alert("Add to do");
+        props.setOpenModal(prevState => !prevState);
     }
     return (
         <button className="CreateButton"
