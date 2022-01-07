@@ -3,7 +3,7 @@ import './TodoSearch.css'
 
 function TodoSearch({ searchValue, setSearchValue }){
 
-    const onSearch = (event) => {
+    const onSearchValueChange = (event) => {
         console.log(event.target.value);
         setSearchValue(event.target.value);
     }
@@ -12,7 +12,7 @@ function TodoSearch({ searchValue, setSearchValue }){
             className="TodoSearch"
             placeholder='Onion'
             value={searchValue}
-            onChange={onSearch}
+            onChange={onSearchValueChange}
         />,
     ];
 }
