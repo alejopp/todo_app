@@ -13,7 +13,7 @@ function TodoSearch(){
     return [
         <input  
             className="TodoSearch"
-            placeholder='Onion'
+            placeholder='Write your task here!'
             value={searchValue}
             onChange={onSearchValueChange}
         />,
