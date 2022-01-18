@@ -4,7 +4,7 @@ Todo app is a web application to make a dynamic list of pending tasks. You will 
 
 ## How does it work? 🚀
 
-_The core and the logic of the project is based in reactjs. The tasks will be saved in a Javascript structure as well as in local storage of your web browser (that way it's not necesary a backend to the data persistence). 
+The core and the logic of the project is based in reactjs. The tasks will be saved in a Javascript structure as well as in local storage of your web browser (that way it's not necesary a backend to the data persistence). 
 
 There is an input box where you can filter your task. Each task (also called todo) has both a check  and a delete icon where you can mark a todo as completed or delete it respectively. Finally there is a button with the sign "+" where you'll be able to add more tasks.
 
