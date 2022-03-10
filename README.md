@@ -15,5 +15,5 @@ There is an input box where you can filter your task. Each task (also called tod
 ![preview](/preview.png)
 
 ## Demo
-Under construction..
+https://alejopp.github.io/todo_app/
 
